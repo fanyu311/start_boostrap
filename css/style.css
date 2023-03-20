@@ -194,17 +194,23 @@ a {
 .fourth {
     width: 30%;
     display: flex;
-    flex-direction: space-around;
+    justify-content: space-around;
     align-items: center;
+  
 }
 
-.fourth-impair {
-    flex-direction: row-reverse;
-}
+
 
 .fourth-img {
     border-radius: 50%;
 }
+
+.fourth-impair {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
 
 .vide {
     width: 200px;
@@ -226,6 +232,7 @@ a {
 .fourth-vide {
     position: relative;
     width: 10%;
+    padding-bottom: 10em;
 }
 
 .fourth-vide p{
@@ -236,4 +243,85 @@ a {
     padding-left: 2em;
     color: rgb(99, 170, 161);
     
+}
+
+/** fifth **/
+
+.fifth-banner {
+    background-color: rgb(241, 240, 237);
+    
+}
+
+.fifth-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     padding-top: 10em;
+  
+}
+
+.fifth-part h4 {
+    font-size: 2.5em;
+    padding-bottom: 1em;
+}
+
+.fifth-part p {
+    font-style: italic;
+    padding-bottom: 1em;
+}
+.fifth-part-2-img {
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
+}
+
+.fifth-a {
+    width: 30px;
+    height: 30px;
+    
+}
+
+.fifth-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5em;
+}
+
+.fifth-part-2 {
+    width: 30%;
+    text-align: center;
+    
+}
+
+.fifth-part-2 h5 {
+    font-size: 1.5em;
+    padding-top: 2em;
+    padding-bottom: .3em;
+}
+
+.fifth-part-2 p {
+    padding-bottom: 1em;
+}
+
+.fifth-change {
+    gap: 2em;
+}
+
+.fifth-text {
+    text-align: center;
+    
+}
+
+/** sixth **/
+
+.sixth-img {
+    width: 224px;
+    height: 175px;
+}
+
+.sixth-part {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
