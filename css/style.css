@@ -19,7 +19,7 @@ a {
 
 /* first */
 .first-banner {
-    background-image: url(/img/header-bg.jpg);
+    background-image: url("https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -30,6 +30,9 @@ a {
 .first-container h1 {
     color: rgb(245, 245, 71);
     font-style: italic;
+    position: sticky;
+    top: 0;
+    z-index: 999999;
 }
 .banner-list {
     color: aliceblue;
@@ -39,6 +42,26 @@ a {
     list-style: none;
     gap: 3em;
 }
+
+.banner-list li:hover {
+    background-color: rgb(245, 245, 71);
+    color: rgb(54, 29, 29);
+    animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #05bada66;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
 
 .first-container {
     display: flex;
@@ -71,7 +94,28 @@ a {
     padding: 2em 4em;
     background-color: rgb(245, 245, 71) ;
     border: none;
+    
 }
+
+
+button:hover {
+        box-shadow: 5px 5px 5px rgb(113, 202, 125);
+        animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #05bada66;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
 
 /* second */
 
@@ -148,11 +192,14 @@ a {
 
 .third-part-1 p {
     font-style: italic;
+    padding-bottom: 2em;
 }
 
 .third-container img{
     width: 400px;
     height: 300px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .third-part-2 {
@@ -169,11 +216,32 @@ a {
 
 /* fourth */
 
+.fourth-container {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 8em;
+    align-items: center;
+}
+    
+.fourth-1 { grid-area: 1 / 1 / 2 / 2; }
+.fourth-2 { grid-area: 1 / 2 / 2 / 3; }
+.fourth-3 { grid-area: 2 / 2 / 3 / 3; }
+.fourth-4 { grid-area: 2 / 3 / 3 / 4; }
+.fourth-5 { grid-area: 3 / 2 / 4 / 3; }
+.fourth-6 { grid-area: 3 / 1 / 4 / 2; }
+.fourth-7 { grid-area: 4 / 2 / 5 / 3; }
+.fourth-8 { grid-area: 4 / 3 / 5 / 4; }
+.fourth-9 { grid-area: 5 / 2 / 6 / 3; }
+
 .fourth-part {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} 
 
 .fourth-part h4 {
     font-size: 2.5em;
@@ -185,25 +253,48 @@ a {
     font-style: italic;
 }
 
-.fourth-container {
+/* .fourth-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
-.fourth {
+/* .fourth {
     width: 30%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  
-}
-
+} */
 
 
 .fourth-img {
     border-radius: 50%;
+    display: block;
+    margin: auto;
 }
+
+.fourth-text h5 {
+    font-size: 30px;
+    font-weight: 800;
+    padding-bottom: .1em;
+}
+
+.fourth-part-3 {
+    position: relative;
+}
+
+.fourth-ombre {
+    width: 215px;
+    height: 215px;
+    border-radius: 50%;
+    background-color: #e9e6e6;
+    position: absolute;
+    z-index: -1;
+    top: -.5em;
+    left: 1.15em;
+}
+
+
 
 .fourth-impair {
     display: flex;
@@ -217,8 +308,30 @@ a {
     height: 200px;
     border-radius: 50%;
     background-color: rgb(245, 245, 71);
+    position: relative;
+    margin: auto;
+}
+
+.vide p {
     position: absolute;
-    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,  -50%);
+    width: 100%;
+    text-align: center;
+    color: rgb(40, 170, 127);
+    font-weight: 700px;
+}
+
+.timeline {
+    width: 3px;
+    background: rgb(206, 204, 204);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
 }
 
 .fourth-part p {
@@ -249,6 +362,7 @@ a {
 
 .fifth-banner {
     background-color: rgb(241, 240, 237);
+    margin-top: 3em;
     
 }
 
@@ -256,7 +370,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-     padding-top: 10em;
+     padding-top: 4em;
   
 }
 
@@ -309,19 +423,141 @@ a {
 }
 
 .fifth-text {
+    width: 50%;
     text-align: center;
-    
+    margin: auto;
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
 
 /** sixth **/
 
 .sixth-img {
-    width: 224px;
-    height: 175px;
+    width: 200px;
+    height: 170px;
+    padding-top: 5em;
 }
 
 .sixth-part {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+
+.sixth-google {
+    width: 170px;
+    height:150px
+    padding-top: 2em;
+}
+.sixth-ibm {
+    width:140px;
+    height: 50px;
+    padding-top: 1.5rem;
+}
+
+.sixth-microsoft {
+    padding-top: 5.5em;
+}
+
+.contact-form {
+    background-image: url('/img/map-image.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    width: 100%;
+    height: 45em;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form h3{
+    color: #e9e6e6;
+    font-size: 3em;
+}
+
+.contact-form p {
+    color: rgb(146, 145, 144);
+}
+
+/* seventh */
+
+.seventh-head {
+    padding-top: 5em;
+}
+
+.seventh-head p {
+    font-style: italic;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.seventh-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.seventh-list-1 {
+    padding: 2em;   
+}
+
+.seventh-list-2 {
+    margin: 2em;
+    width: 40em;
+    height: 5em;
+    border-radius: 8px;
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.seven-text {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid black;
+    
+    font-size: 3em;
+    font-weight: 400;
+
+}
+
+.seventh-button {
+    padding: 1em 3em;
+    background-color: rgb(245, 245, 71) ;
+    border-radius: 10px;
+}
+
+.seven-button:hover {
+    box-shadow: 5px 5px 5px rgb(113, 202, 125);
+    animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+0% {
+ box-shadow: 0 0 0 0 #05bada66;
+}
+
+70% {
+ box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+}
+
+100% {
+ box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+}
+}
+
+.footer-img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-part {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
